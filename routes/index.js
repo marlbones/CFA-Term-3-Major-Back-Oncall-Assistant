@@ -21,9 +21,9 @@ router.get('/', ensureAuthenticated, (req, res) => {
   res.render('index');
 });
 
-router.get('/clients', ensureAuthenticated, clientController.getClients);
+router.get('/clients', clientController.getClients);
 router.post('/clients', clientController.postClients);
-router.get('/clients/:id', ensureAuthenticated, clientController.getClient);
+router.get('/clients/:id', clientController.getClient);
 router.post('/clients/:id', clientController.updateClient);
 router.delete('/clients/:id', clientController.deleteClients);
 
