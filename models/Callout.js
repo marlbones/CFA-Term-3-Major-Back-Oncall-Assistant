@@ -23,6 +23,6 @@ const calloutSchema = new Schema({
   }
 })
 
-const Callout = mongoose.model('Callout', clientSchema);
+const Callout = mongoose.model('Callout', calloutSchema);
 
 module.exports = Callout;
