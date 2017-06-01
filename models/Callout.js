@@ -20,6 +20,15 @@ const calloutSchema = new Schema({
   },
   client_id: {
     type: String
+  },
+  day: {
+    type: String
+  },
+  month: {
+    type: String
+  },
+  year: {
+    type: Number
   }
 })
 

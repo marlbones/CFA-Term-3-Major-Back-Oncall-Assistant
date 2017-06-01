@@ -15,6 +15,9 @@ exports.postCallouts = (req, res) => {
   const call_phone = req.query.call_phone;
   const length = req.query.length;
   const client_id = req.query.client_id;
+  const day = req.query.day;
+  const month = req.query.month;
+  const year = req.query.year;
   let callout = new Callout();
   callout.cw_name = cw_name;
   callout.time = time;
@@ -22,6 +25,9 @@ exports.postCallouts = (req, res) => {
   callout.call_phone = call_phone;
   callout.length = length;
   callout.client_id = client_id;
+  callout.day = day;
+  callout.month = month;
+  callout.year = year;
   callout.save()
     .then(() => {
       res.json(callout)
