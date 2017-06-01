@@ -29,6 +29,10 @@ const calloutSchema = new Schema({
   },
   year: {
     type: Number
+  },
+  created_at: {
+    type: Date,
+    default: Date.now
   }
 })
 

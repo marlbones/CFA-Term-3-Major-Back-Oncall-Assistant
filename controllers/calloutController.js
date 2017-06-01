@@ -18,6 +18,7 @@ exports.postCallouts = (req, res) => {
   const day = req.query.day;
   const month = req.query.month;
   const year = req.query.year;
+  const created_at = req.query.created_at;
   let callout = new Callout();
   callout.cw_name = cw_name;
   callout.time = time;
@@ -28,6 +29,7 @@ exports.postCallouts = (req, res) => {
   callout.day = day;
   callout.month = month;
   callout.year = year;
+  callout.created_at = created_at;
   callout.save()
     .then(() => {
       res.json(callout)
