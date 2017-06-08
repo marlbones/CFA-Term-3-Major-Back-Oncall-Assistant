@@ -5,7 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
-var cors = require('cors')
+var cors = require('cors');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
@@ -23,7 +23,7 @@ var clientAuth = require('./middleware/clientAuth')
 //Init app
 var app = express();
 
-app.use(cors())
+app.use(cors());
 
 //json webtoken
 // var jwt = require('jsonwebtoken');
